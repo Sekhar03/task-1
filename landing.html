@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    /* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.item{
+  flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            flex: 0 0 66.6666666667%;
+                max-width: 66.6666666667%;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 30px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item a:hover {
+  color: #f00;
+}
+
+.hero {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero-text {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: black;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Services styles */
+.services {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.service-item {
+  max-width: 300px;
+  margin: 0 30px;
+margin-bottom: 60px;
+background-color: #fff;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+padding: 40px;
+border-radius: 4px;
+}
+
+.service-icon {
+font-size: 48px;
+color: #f00;
+margin-bottom: 20px;
+}
+
+.service-title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.service-description {
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+/* Testimonials styles */
+.testimonials {
+padding: 80px 0;
+text-align: center;
+}
+
+.testimonial-item {
+max-width: 500px;
+margin: 0 auto;
+margin-bottom: 60px;
+background-color: #fff;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+padding: 40px;
+border-radius: 4px;
+}
+
+.testimonial-text {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.testimonial-author {
+font-size: 18px;
+font-style: italic;
+}
+
+/* Footer styles */
+.footer {
+background-color: #333;
+color: #fff;
+padding: 80px 0;
+}
+
+.footer-item {
+margin-bottom: 40px;
+}
+
+.footer-title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-list {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.footer-item i {
+margin-right: 10px;
+}
+
+.footer-item a {
+color: #fff;
+text-decoration: none;
+}
+
+.footer-item a:hover {
+color: #f00;
+}
+nav li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropbtn {
+  display: block;
+  color: #0f0f0f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #444;
+}
+.container {
+        display: flex;
+        flex-direction: column;
+      }
+      .item {
+        flex: 1;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+  </style>
+  <body>
+    
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="logo">Your Logo</a>
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Language</a>
+            <div class="dropdown-content">
+              <a href="#">English</a>
+              <a href="#">Spanish</a>
+              <a href="#">French</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1 class="hero-title">The VPN That Just Works</h1>
+        <p class="hero-text">Go Further With The #1 Trusted Leader In VPN</p>
+        <a href="#" class="btn hero-btn">Get ExpressVPN</a>
+        <h5>30 days Money back Guarentee</h5>
+        <div class="container">
+          <div class="item"></div>
+          <div class="item">Item 2</div>
+          <div class="item">Item 3</div>
+          <div class="item">Item 4</div>
+          <div class="item">Item 5</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-container">
+        <div class="service-item">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">We create responsive and user-friendly websites that stand out from the crowd</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-mobile-alt service-icon"></i>
+          <h3 class="service-title">Mobile Development</h3>
+          <p class="service-desc">We build mobile apps that offer seamless performance and a great user experience</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-shopping-cart service-icon"></i>
+          <h3 class="service-title">E-commerce</h3>
+          <p class="service-desc">We help you set up an online store that sells your products 24/7</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="section-title">Ready to get started?</h2>
+      <p class="cta-text">Let us help you take your business to the next level</p>
+      <a href="#" class="btn cta-btn">Contact Us</a>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <h3 class="footer-title">Your Logo</h3>
+          <p class="footer-desc">We are a team of professionals who are passionate about building great products that help businesses succeed</p>
+        </div>
+        <div class="footer-item">
+          <h3 class="footer-title">Links</h3>
+          <ul class="footer-list">
+            <li class="footer-item"><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Language</a>
+                <div class="dropdown-content">
+                  <a href="#">English</a>
+                  <a href="#">Spanish</a>
+                  <a href="#">French</a>
+                </div>
+              </li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3 class="footer-title">Contact Us</h3>
+        <ul class="footer-list">
+          <li class="footer-item"><i class="fas fa-map-marker-alt"></i>123 Main St, Anytown USA</li>
+          <li class="footer-item"><i class="fas fa-phone"></i>+1 (555) 555-5555</li>
+          <li class="footer-item"><i class="fas fa-envelope"></i>info@yourwebsite.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
